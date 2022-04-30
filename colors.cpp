@@ -5,7 +5,7 @@
 #include <iostream>
 #include <ostream>
 #include <string>
-#include "../pchar.h"
+#include "pchar.h"
 
 enum class Color {
     Red,
@@ -18,10 +18,9 @@ enum Flavor : unsigned short int {
     Chocolate
 };
 
-int _pmain(int /*argc*/, char * /*argv*/[]) {
+int _pmain2(int /*argc*/, _pchar * /*argv*/[]) {
     Flavor f = Vanilla;
-    f = Mint;
+//    f = Mint;
     Color c = Color::Green;
-
-
+    return 0;
 }

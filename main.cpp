@@ -20,13 +20,16 @@ struct Cat {
 
 vector<string> names;
 
-int main() {
-    for (int i = 0; i < 2; ++i) {
-        printf("Name is %s", )
-    }
-    return 0;
-}
+void catsPopulate() {
+    vector<std::string> cats;
+    unsigned long size = cats.capacity();
+    printf("cats size is %lu", size);
+    cats.push_back("Murz");
+    cats.emplace_back("Vasyl");
+    std::cout << cats.at(0) << endl;
+    std::cout << cats.at(1) << endl;
 
+}
 void writeFile() {
 
     string name;
@@ -50,3 +53,17 @@ void misc2() {
     cout << "";
     std::cout << "Hello, " << name << std::endl;
 }
+
+
+
+
+int main() {
+    for (int i = 0; i < 2; ++i) {
+        printf("Name is %s", "");
+    }
+    catsPopulate();
+    return 0;
+}
+
+
+
