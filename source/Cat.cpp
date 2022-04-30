@@ -3,3 +3,10 @@
 //
 
 #include "Cat.h"
+
+class Tiger : HCats::Cat {
+    int age;
+    std::string name;
+//    HCats::Cat cat = new HCats::Cat();
+
+};

@@ -4,6 +4,7 @@
 #include <string>
 #include <vector>
 #include <fstream>
+#include "source/Cat.h"
 
 using namespace std;
 
@@ -14,16 +15,25 @@ void count() {
 
 }
 
-struct Cat {
-    std::string name;
-};
+namespace Cats {
+    struct CatStruct {
+        std::string name;
+        CatStruct(string name) {
+            this->name = name;
+        }
+    };
+}
 
 vector<string> names;
 
 void catsPopulate() {
     vector<std::string> cats;
+    Cats::CatStruct murz = Cats::CatStruct("Murz");
+    murz.name = "Murz 2";
+    auto pukh = Cats::CatStruct("Pukh");
     unsigned long size = cats.capacity();
     printf("cats size is %lu", size);
+    cats.emplace_back(pukh.name);
     cats.push_back("Murz");
     cats.emplace_back("Vasyl");
     std::cout << cats.at(0) << endl;
@@ -58,9 +68,6 @@ void misc2() {
 
 
 int main() {
-    for (int i = 0; i < 2; ++i) {
-        printf("Name is %s", "");
-    }
     catsPopulate();
     return 0;
 }

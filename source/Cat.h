@@ -7,10 +7,20 @@
 #include "string"
 
 
-class Cat {
-    int age;
-    std::string name;
-};
+namespace HCats {
+    class Cat {
+        int age;
+        std::string name;
+
+    public:
+        Cat(std::string name, int age) {}
+        virtual ~Cat(void );
+
+        std::string Meow() {
+            return "Meow!";
+        }
+    };
+}
 
 
 #endif //CPP_FEATURES_CAT_H
